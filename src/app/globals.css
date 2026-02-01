@@ -1,7 +1,12 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #0B1C2D;
+  --secondary-color: #3A3F45;
+  --accent-color: #4FA3A5;
+  --accent-soft-blue: #6FA8DC;
+  --background-color: #F5F7FA;
+  --finishing-color: #32de84;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -18,7 +23,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,9 +35,111 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
+.homepage-header .navbar-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-container .logo {
+  width: auto;
+  height: 50px;
+}
+.logo img {
+  width: auto;
+  height: 100%;
+}
+.action-containers {
+  display: flex;
+  gap: 15px;
+}
+.action-containers button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;  
+}
+ 
+.action-containers .book-a-demo-button {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+.action-containers .book-a-demo-button:hover {
+  color: var(--primary-color);
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
   text-decoration: none;
+  color: var(--secondary-color);    
+  font-size: 14px;
+}
+.nav-links a:hover {
+  color: var(--primary-color);    
+}
+.hero-section {
+  text-align: center;
+  width: 60%;
+  margin: 5% auto;
+  background-color: var(--background-color);
+}
+.hero-section h1 {
+  font-size: 60px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.hero-section p { 
+  font-size: 18px;
+  padding: 1rem 0;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+.hero-section .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.cta-buttons button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;  
+}
+.cta-buttons .view-docs-button {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+.hero-section .featured-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.featured-container .featured-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.featured-item i {
+  font-size: 18px;
+  color: var(--finishing-color);  
+}
+.featured-item span {
+  font-size: 14px;
+  color: var(--secondary-color);  
 }
 
 @media (prefers-color-scheme: dark) {

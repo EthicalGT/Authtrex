@@ -3,64 +3,70 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+    <header className="homepage-header">
+      <nav>
+        <div className="navbar-container">
+          <div className="logo">
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/favicon.png"
+              alt="Authrex Logo"
+              width={150}
+              height={50}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <ul className="nav-links">
+            <li>
+              <a href="#features">Product</a>
+            </li>
+            <li>
+              <a href="#docs">Features</a>
+            </li>
+            <li>
+              <a href="#github">Developers</a>
+            </li>
+            <li>
+              <a href="#github">Security</a>
+            </li>
+            <li>
+              <a href="#github">Pricing</a>
+            </li>
+            <li>
+              <a href="#github">Docs</a>
+            </li>
+          </ul> 
+          <div className="action-containers">
+            <button className="book-a-demo-button">Book a Demo</button>
+            <button className="get-started-button">Get Started</button>
+          </div>
         </div>
-      </main>
-    </div>
+      </nav>
+    </header>
+    <section className="hero-section">
+      <div className="hero-content">
+        <h1>Adaptive Authentication Infrastructure for Modern Applications</h1>
+        <p>Design, control, and scale secure authentication workflows without locking your UI or logic.</p>
+        
+      </div>
+      <div className="cta-buttons">
+          <button className="start-free-button">Start Free</button>
+          <button className="view-docs-button">View Docs</button>
+        </div>
+       <div className="featured-container">
+        <div className="featured-item">
+        <i className="fa-solid fa-shield-halved"></i>
+        <span>Enterprise Grade Security</span>
+        </div>
+        <div className="featured-item">
+        <i className="fa-solid fa-code"></i>
+        <span>Developer Friendly</span>
+        </div>
+        <div className="featured-item">
+        <i className="fa-regular fa-clock"></i>
+        <span>Fast & Scalable</span>
+        </div>
+        </div> 
+    </section>
+    </>
   );
 }
