@@ -103,3 +103,25 @@ body {
     color-scheme: dark;
   }
 }
+
+@media(max-width: 768px) {
+  .hero-section {
+    width: 90%;
+    margin: 10% auto;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .featured-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .hero-section h1 {
+    font-size: 40px;
+  }
+  .hero-section p {
+    font-size: 14px;
+  }
+}
