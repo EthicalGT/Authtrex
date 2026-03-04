@@ -1,47 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Navbar from "./components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <>
-    <header className="homepage-header">
-      <nav>
-        <div className="navbar-container">
-          <div className="logo">
-            <Image
-              src="/favicon.png"
-              alt="Authrex Logo"
-              width={150}
-              height={50}
-            />
-          </div>
-          <ul className="nav-links">
-            <li>
-              <a href="#features">Product</a>
-            </li>
-            <li>
-              <a href="#docs">Features</a>
-            </li>
-            <li>
-              <a href="#github">Developers</a>
-            </li>
-            <li>
-              <a href="#github">Security</a>
-            </li>
-            <li>
-              <a href="#github">Pricing</a>
-            </li>
-            <li>
-              <a href="#github">Docs</a>
-            </li>
-          </ul> 
-          <div className="action-containers">
-            <button className="book-a-demo-button">Book a Demo</button>
-            <button className="get-started-button">Get Started</button>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <Navbar /> 
+    
     <section className="hero-section">
       <div className="hero-content">
         <h1>Adaptive Authentication Infrastructure for Modern Applications</h1>
