@@ -6,8 +6,13 @@
   --background-color: #F5F7FA;
   --finishing-color: #32de84;
 }
+@font-face {
+  font-family: Titilium Web;
+  src: url("../../assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+}
 html, body {
   overflow-x: hidden;
+  font-family: Titilium Web;
 }
 
 .homepage-header .navbar-container {

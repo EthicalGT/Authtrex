@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
           </ul> 
           <div className="action-containers">
-            <button className="book-a-demo-button">Book a Demo</button>
+            <button className="login-button">Sign In</button>
             <button className="get-started-button">Get Started</button>
           </div>
         </div>
