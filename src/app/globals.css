@@ -1,5 +1,6 @@
 :root {
   --primary-color: #0B1C2D;
+  --faint-primary-color: #183a5c80;
   --secondary-color: #3A3F45;
   --accent-color: #4FA3A5;
   --faint-accent-color: #e7f3f3;
@@ -13,7 +14,6 @@
   font-family: Titilium Web;
   src: url("./assets/fonts/GoogleSans-Regular.ttf") format("truetype");
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -41,8 +41,21 @@ body {
   padding: 0;
   margin: 0;
 }
-
-
+.assistant-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;  
+}
 .hero-section {
   text-align: center;
   width: 60%;
@@ -91,9 +104,10 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .featured-item i {
   font-size: 18px;
-  color: var(--finishing-color);
+  color: var(--accent-color);
   transition: 0.3s ease;  
 } 
 
@@ -101,6 +115,7 @@ body {
   font-size: 14px;
   color: var(--secondary-color);  
 }
+
 .featured-item:hover i {
   transform: scale(1.2);
 } 
@@ -137,6 +152,7 @@ body {
   align-items: center;
   gap: 50px;
 }
+
 .features-item-container .feature-item {
   justify-content: left;
   flex-direction: column;
@@ -149,14 +165,17 @@ body {
   border-radius: 8px;
   transition: 0.3s ease;
 }
+
 .features-item-container .feature-item:hover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, var(--accent-color) 0px 0px 0px 1px;
 }
+
 .features-item-container .feature-item .feature-icon-container {
   width: 100%;
   display: flex;
   justify-content: left;
 }
+
 .feature-icon-container i {
   font-size: 24px;
   padding: 10px;
@@ -165,19 +184,209 @@ body {
   transition: 0.5s ease-in-out;
   border-radius: 10px;
 }
+
 .features-item-container .feature-item:hover i{
   color: var(--foreground);
   background-color: var(--accent-color);
 }
+
 .feature-item h3 {
   font-size: 20px;
   padding: 0px;
   color: var(--primary-color);
 }
+
 .feature-item p {
   font-size: 16px;
   padding: 0px 10px 0px 0px;
   color: var(--secondary-color);
+}
+
+.working-container {
+  width: 90%;
+  margin: 5% auto;
+  background-color: var(--background-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+.working-container .working-heading {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.working-container p {
+  padding: 0px 20px 0px 20px;
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+.working-container .working-steps-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+.working-steps-container .working-step {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 350px;
+  height: 250px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.working-step .step-icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.step-icon-container i {
+  font-size: 24px;
+  padding: 15px;
+  background-image: linear-gradient(to right, var(--accent-color) 0%, #00f2fe 100%);
+  color: var(--foreground);
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+.working-step span {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: bolder;
+}
+.working-step h3 {
+  font-size: 20px;
+  padding-top: 20px;
+  color: var(--primary-color);
+}
+.working-step p {
+  font-size: 16px;
+  padding: 20px;
+  color: var(--secondary-color);
+}
+
+.developer-documetation-container {
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  background-color: var(--background-color);
+  padding: 40px 20px;
+  text-align: center; 
+  align-items: center;
+  gap: 30px;
+}
+.developer-documetation-container .snippet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+.snippet-container .snippet-header {
+  display: flex;
+  width: 100%;
+  background-color: var(--faint-primary-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--foreground);
+}
+.snippet-container span {
+  padding: 10px;
+  font-size: 14px;
+  color: var(--foreground);
+  font-weight: bolder;
+}
+.snippet-header .action-container {
+  padding: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+}
+.action-container .actions-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+.action-container .actions-yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+.action-container .actions-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+.snippet-container .snippet-content {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+.snippet-content code {
+  color: var(--foreground);
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 14px;
+}
+
+.documentation-container {
+  padding: 40px 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 20px;
+  text-align: left;
+}
+.documentation-container h2 {
+  color: var(--primary-color);
+  text-align: left;
+}
+.documentation-container p {
+  color: var(--secondary-color);
+}
+.documentation-container ul li {
+  color: var(--primary-color);
+  padding: 10px 0px 10px 0px;
+  font-weight: bolder;
+  list-style-type: none;
+}
+.documentation-container ul li i {
+  color: var(--accent-color);
+  padding-right: 10px;
+  margin-right: 10px;
+  background-color: var(--faint-accent-color);
+  padding: 5px;
+  border-radius: 50%;
+}
+.documentation-container ul p {
+  color: var(--secondary-color);
+  padding: 0px 0px 0px 30px;
+  margin: 0px;
+}
+.documentation-container button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 200px;
+  padding: 15px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bolder;  
+}
+.documentation-container button:hover {
+  background: var(--faint-primary-color);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -205,4 +414,15 @@ body {
   .hero-section p {
     font-size: 14px;
   }
+  .developer-documetation-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .developer-documetation-container .snippet-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .documentation-container {
+    width: 100%;  
+}
 }
