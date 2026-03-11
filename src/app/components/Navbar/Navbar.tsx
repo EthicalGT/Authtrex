@@ -2,6 +2,7 @@
 import Image from "next/image";
 import "./Navbar.css";
 import { useState } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,22 +29,34 @@ const Navbar = () => {
           </div>
           <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
             <li>
-              <a href="#features" onClick={toggleMenu} >Product</a>
+              <Link href="../components/QuickAuth/" onClick={toggleMenu}>
+                Product
+              </Link>
             </li>
             <li>
-              <a href="#docs" onClick={toggleMenu}>Features</a>
+              <Link href="#docs" onClick={toggleMenu}>
+                Features
+              </Link>
             </li>
             <li>
-              <a href="#github" onClick={toggleMenu}>Developers</a>
+              <Link href="#github" onClick={toggleMenu}>
+                Developers
+              </Link>
             </li>
             <li>
-              <a href="#github" onClick={toggleMenu}>Security</a>
+              <Link href="#github" onClick={toggleMenu}>
+                Security
+              </Link>
             </li>
             <li>
-              <a href="#github" onClick={toggleMenu}>Pricing</a>
+              <Link href="#github" onClick={toggleMenu}>
+                Pricing
+              </Link>
             </li>
             <li>
-              <a href="#github" onClick={toggleMenu}>Docs</a>
+              <Link href="#github" onClick={toggleMenu}>
+                Docs
+              </Link>
             </li>
           </ul> 
           <div className="action-containers">

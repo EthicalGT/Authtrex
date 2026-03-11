@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #0B1C2D;
+  --secondary-color: #3A3F45;
+  --accent-color: #4FA3A5;
+  --accent-soft-blue: #6FA8DC;
+  --background-color: #F5F7FA;
+  --finishing-color: #32de84;
+  --cards-bg-color: #ffffff;
+}
+@font-face {
+  font-family: Titilium Web;
+  src: url("../../assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+}
+html, body {
+  overflow-x: scroll;
+  font-family: Titilium Web;
+}
+.authorize-main-container {
+    background-color: var(--background-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.authorize-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.authorize-container i {
+    font-size: 2rem;
+    color: var(--background-color);
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, var(--accent-color) 0%, #00f2fe 100%);
+    padding: 20px;
+    border-radius: 8px;
+}
+.authorize-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.authorize-container p {
+    color: var(--secondary-color);
+    margin: 0;
+}
+.authorize-container img {
+    margin-bottom: 1rem;
+}
+.authrex-account-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.authrex-account-container .authrex-account-data {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--cards-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.authrex-account-container .authrex-account-data .user-icon {
+    border-radius: 50%;
+    margin: 0;
+}
+
+.authrex-account-container .authrex-account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.authrex-account-container .authrex-account-info h3 {
+    color: var(--primary-color);
+}
+.authrex-account-container .authrex-account-info p {
+    color: var(--secondary-color);
+}
+.authrex-account-container .icon {
+    float: right;
+    background: transparent;
+    color: var(--secondary-color);
+    margin: 0;
+}

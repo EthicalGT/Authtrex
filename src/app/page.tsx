@@ -1,8 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
+import Link from "next/link";
 
 export default function Home() {
+
   const featuresData = [
     {
       icon: "fa-solid fa-code-branch",
