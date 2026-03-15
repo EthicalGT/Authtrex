@@ -8,6 +8,7 @@
   --background-color: #F5F7FA;
   --finishing-color: #32de84;
   --cards-bg-color: #ffffff;
+  --payne-grey-color: #0b1125;
 }
 
 @font-face {
@@ -55,6 +56,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;  
+}
+.assistant-btn .chatbot {
+  color: var(--accent-soft-blue);
 }
 .hero-section {
   text-align: center;
@@ -148,7 +152,7 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 50px;
 }
@@ -224,7 +228,7 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 50px;
 }
@@ -275,6 +279,7 @@ body {
   background-color: var(--background-color);
   padding: 40px 20px;
   text-align: center; 
+  justify-content: center;
   align-items: center;
   gap: 30px;
 }
@@ -387,6 +392,45 @@ body {
 }
 .documentation-container button:hover {
   background: var(--faint-primary-color);
+}
+.security-features-container {
+  background-color: var(--primary-color);
+  color: var(--foreground);
+  height: auto;
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+}
+.security-features-container h2 {
+  font-size: 22px;
+  padding-top: 25px;
+}
+.security-features-container p {
+  padding-top: 10px;
+}
+.security-features-card-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 3% 0px 3% 0px;
+}
+.security-features-card-container .security-feature-card {
+  background-color: var(--payne-grey-color);
+  text-align: left;
+  padding: 15px 10px 15px 10px;
+  border-radius: 8px;
+}
+.security-feature-card i {
+  color: var(--finishing-color);
+  padding: 5px;
+  background-color: #2d5c5f;
+  font-size: 24px;
+  border-radius: 8px;
+}
+.security-feature-card h3 {
+  padding-top: 15px;
 }
 @media (prefers-color-scheme: dark) {
   html {

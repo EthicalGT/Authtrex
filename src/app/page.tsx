@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Link from "next/link";
+import { features } from "process";
 
 export default function Home() {
 
@@ -37,6 +38,29 @@ export default function Home() {
       description: "Comprehensive logging and monitoring for compliance and security"
     }
   ];
+  const securityFeatureData = [
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Zero Trust Friendly",
+      description: "Built on zero trust principles with continuous verification"
+    }, 
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Policy-Based Decisions", 
+      description: "Flexible policy engine for granular access control"
+    },
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Continuous Verification", 
+      description: "Real-time risk assessment throughout user sessions"
+    },
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Enterprise-Grade Logging", 
+      description: "Comprehensive audit trails for compliance and security"
+    }
+
+  ];
   return (
     <>
     <Navbar /> 
@@ -68,7 +92,7 @@ export default function Home() {
     </section>
     <main>
       <div className="assistant-btn">
-        <i className="fa-solid fa-headset"></i>
+        <i className="fa-solid fa-headset chatbot"></i>
       <span>Talk With Us!</span>
       </div>
       <div className="features-container">
@@ -179,6 +203,22 @@ if (result.decision === 'allow') {
           </ul>
           <button>Read Documentation</button>
         </div>
+      </div>
+      <div className="security-features-container">
+        <h2>Security & Compliance First</h2>
+          <p>Enterprise-grade security infrastructure built for the most demanding requirements</p>
+      <div className="security-features-card-container">
+        {securityFeatureData.map((feature, i) => (
+        <div className="security-feature-card" key={i}>
+           <i className={feature.icon}></i>
+           <h3>{feature.title}</h3>
+           <p>{feature.description}</p>
+        </div>
+  ))}
+      </div>
+      </div>
+      <div className="get-started-container">
+        <h2>Authentication should adapt to risk — not slow users down.</h2>
       </div>
     </main>
     </>
