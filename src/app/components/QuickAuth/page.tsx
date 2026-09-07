@@ -20,7 +20,9 @@ const Authorize = () => {
             <div className="authorize-main-container">
                 <div className="authorize-container">
                     <div className="authorize-logo">
-                        <Image src="/icon.png" alt="AuthREX" width={100} height={32} style={{ objectFit: 'contain' }} />
+                        <Link href="/">
+                            <Image src="/icon.png" alt="AuthREX" width={100} height={32} style={{ objectFit: 'contain' }} />
+                        </Link>
                     </div>
                     <h2>Choose an AUTHREX account</h2>
                     <p className="subtitle">Continue to DevForum</p>
@@ -52,9 +54,9 @@ const Authorize = () => {
                     <div className="authorize-footer">
                         <div className="footer-links">
                             <button onClick={() => setIsPrivacyOpen(true)} className="footer-link-btn">Privacy Policy</button>
-                            <Link href="/terms">Terms</Link>
+                            <button onClick={() => setIsPrivacyOpen(true)} className="footer-link-btn">Terms</button>
                             <Link href="/security">Security</Link>
-                            <Link href="/status">AUTHREX Status</Link>
+                            <Link href="/security">AUTHREX Status</Link>
                         </div>
                         <div className="copyright">
                             © AUTHREX Identity Infrastructure

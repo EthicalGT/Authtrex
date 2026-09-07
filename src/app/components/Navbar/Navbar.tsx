@@ -15,12 +15,14 @@ const Navbar = () => {
       <nav>
         <div className="navbar-container">
           <div className="logo">
-            <Image
-              src="/favicon.png"
-              alt="Authrex Logo"
-              width={150}
-              height={50}
-            />
+            <Link href="/">
+              <Image
+                src="/favicon.png"
+                alt="Authrex Logo"
+                width={150}
+                height={50}
+              />
+            </Link>
           </div>
           <div className={`hamburger-container ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
             <div className="hamburger-line"></div>
@@ -29,7 +31,7 @@ const Navbar = () => {
           </div>
           <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
             <li>
-              <Link href="../components/QuickAuth/" onClick={toggleMenu}>
+              <Link href="/components/QuickAuth" onClick={toggleMenu}>
                 Product
               </Link>
             </li>
@@ -39,7 +41,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="developers-docs" onClick={toggleMenu}>
+              <Link href="/#developers-docs" onClick={toggleMenu}>
                 Developers
               </Link>
             </li>

@@ -333,69 +333,88 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 0;
   width: 50%;
   background-color: var(--primary-color);
-  border-radius: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .snippet-container .snippet-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  background-color: var(--faint-primary-color);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: var(--foreground);
+  padding: 12px 18px;
+  background-color: #06111d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .snippet-container span {
-  padding: 10px;
-  font-size: 14px;
-  color: var(--foreground);
-  font-weight: bolder;
+  padding: 0;
+  font-size: 13px;
+  color: #718096;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .snippet-header .action-container {
-  padding: 10px;
+  padding: 0;
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .action-container .actions-red {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #ff5f56;
 }
 
 .action-container .actions-yellow {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #ffbd2e;
 }
 
 .action-container .actions-green {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #27c93f;
 }
 
 .snippet-container .snippet-content {
   width: 100%;
   padding: 20px;
   text-align: left;
+  overflow-x: auto;
+  background-color: #0b1c2d;
+}
+
+.snippet-content pre {
+  margin: 0;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, Menlo, Monaco, monospace !important;
 }
 
 .snippet-content code {
-  color: var(--foreground);
-  padding: 10px;
-  border-radius: 5px;
+  color: #e2e8f0;
+  padding: 0;
+  border-radius: 0;
   display: block;
   font-size: 14px;
+  line-height: 1.65;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, Menlo, Monaco, monospace !important;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  white-space: pre;
+  tab-size: 2;
 }
 
 .documentation-container {

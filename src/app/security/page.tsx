@@ -268,7 +268,7 @@ export default function SecurityPage() {
           <p>Talk to our security team about how AUTHREX can meet your organization&apos;s compliance and security requirements.</p>
           <div className="cta-actions">
             <Link href="/sign-up" className="btn-primary">Get Started</Link>
-            <Link href="#contact" className="btn-outline">Contact Security Team</Link>
+            <Link href="/about" className="btn-outline">Contact Security Team</Link>
           </div>
           <div className="cta-checklist">
             <span><i className="fa-solid fa-check"></i> Free security assessment</span>

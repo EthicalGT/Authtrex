@@ -13,7 +13,9 @@ export default function Footer() {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-brand">
-          <Image src="/icon.png" alt="Authrex Logo" width={120} height={40} className="footer-logo" />
+          <Link href="/">
+            <Image src="/icon.png" alt="Authrex Logo" width={120} height={40} className="footer-logo" />
+          </Link>
           <p>Adaptive authentication infrastructure for modern applications.</p>
         </div>
 
@@ -21,10 +23,10 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Product</h4>
             <ul>
-              <li><Link href="#features">Features</Link></li>
+              <li><Link href="/#features">Features</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/security">Security</Link></li>
-              <li><Link href="#enterprise">Enterprise</Link></li>
+              <li><Link href="/security">Enterprise</Link></li>
             </ul>
           </div>
 
@@ -42,9 +44,9 @@ export default function Footer() {
             <h4>Company</h4>
             <ul>
               <li><Link href="/about">About</Link></li>
-              <li><Link href="#careers">Careers</Link></li>
-              <li><Link href="#blog">Blog</Link></li>
-              <li><Link href="#contact">Contact</Link></li>
+              <li><Link href="/about">Careers</Link></li>
+              <li><Link href="/docs">Blog</Link></li>
+              <li><Link href="/about">Contact</Link></li>
             </ul>
           </div>
 
@@ -52,8 +54,8 @@ export default function Footer() {
             <h4>Legal</h4>
             <ul>
               <li><button onClick={() => setIsPrivacyOpen(true)} className="footer-modal-btn">Privacy Policy</button></li>
-              <li><Link href="#terms">Terms of Service</Link></li>
-              <li><Link href="#compliance">Compliance</Link></li>
+              <li><button onClick={() => setIsPrivacyOpen(true)} className="footer-modal-btn">Terms of Service</button></li>
+              <li><Link href="/security">Compliance</Link></li>
               <li><Link href="/security">Security</Link></li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Chatbot from "./components/Chatbot/Chatbot";
 import Footer from "./components/Footer/Footer";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -70,8 +71,8 @@ export default function Home() {
 
         </div>
         <div className="cta-buttons">
-          <button className="start-free-button">Start Free</button>
-          <button className="view-docs-button">View Docs</button>
+          <Link href="/sign-up"><button className="start-free-button">Start Free</button></Link>
+          <Link href="/docs"><button className="view-docs-button">View Docs</button></Link>
         </div>
         <div className="featured-container">
           <div className="featured-item">
@@ -90,7 +91,7 @@ export default function Home() {
       </section>
       <main>
         <Chatbot />
-        <div className="features-container">
+        <div className="features-container" id="features">
           <h2 className="features-heading">Enterprise-Grade Authentication Features</h2>
           <p>Everything you need to build secure, scalable authentication systems</p>
           <div className="features-item-container">
@@ -183,7 +184,7 @@ if (result.decision === 'allow') {
               </pre>
             </div>
           </div>
-          <div className="documentation-container" id="#developers-docs">
+          <div className="documentation-container" id="developers-docs">
             <h2>Built for Developers</h2>
             <p>AUTHREX provides clean, intuitive APIs and comprehensive SDKs that make integration seamless. Focus on building your application while we handle the complexity of authentication.</p>
             <ul>
@@ -196,10 +197,10 @@ if (result.decision === 'allow') {
               <li><i className="fa-solid fa-check"></i>Easy Integration</li>
               <p>Get started in minutes with our quick-start guides</p>
             </ul>
-            <button>Read Documentation</button>
+            <Link href="/docs"><button>Read Documentation</button></Link>
           </div>
         </div>
-        <div className="security-features-container">
+        <div className="security-features-container" id="security">
           <h2>Security & Compliance First</h2>
           <p>Enterprise-grade security infrastructure built for the most demanding requirements</p>
           <div className="security-features-card-container">
@@ -216,8 +217,8 @@ if (result.decision === 'allow') {
           <h2>Authentication should adapt to risk — not slow users down.</h2>
           <p>Join forward-thinking teams building secure, adaptive authentication systems with AUTHREX.</p>
           <div className="get-started-actions">
-            <button className="get-started-button">Get Started</button>
-            <button className="get-started-button">Book Demo</button>
+            <Link href="/sign-up"><button className="get-started-button">Get Started</button></Link>
+            <Link href="/about"><button className="get-started-button">Book Demo</button></Link>
           </div>
           <div className="get-started-features">
             <p>Free Trial Version - V1</p>

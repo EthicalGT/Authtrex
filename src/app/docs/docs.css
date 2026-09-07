@@ -119,28 +119,31 @@
 /* Code Blocks */
 .docs-content pre {
   background: var(--primary-color);
-  color: #ffffff;
+  color: #e2e8f0;
   padding: 20px;
   border-radius: 8px;
   overflow-x: auto;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, Menlo, Monaco, monospace !important;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 32px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .docs-content code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, Menlo, Monaco, monospace !important;
 }
 
-.docs-content p code {
-  background: rgba(0, 0, 0, 0.05);
+.docs-content p code,
+.docs-content li code {
+  background: rgba(79, 163, 165, 0.12);
   color: var(--accent-color);
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 13.5px;
   font-weight: 600;
+  font-family: var(--font-geist-mono), 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, Menlo, Monaco, monospace !important;
 }
 
 /* Mobile responsive */
